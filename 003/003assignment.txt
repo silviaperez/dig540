@@ -1,0 +1,38 @@
+Week 3 – Assignment.
+CDs were first launched by Sony and Philips in 1982.  Since there, the new product enjoyed commercial success and grew up all over the world.  A new important audio medium was created. In the nineties, the CD continued to grow and became a mass media.  Vast CD collections appeared in libraries, repositories, and radio stations. With the development of the CD-Recordable, which became a mass medium, allowed people to transferring analog media onto CD-R.
+But the music CD industry had a metadata problem. The CDs were designed to store digital files without no space to add descriptive and technical metadata associated with the content or recording.  The most basic elements, such as, artist, title, composer, or date, were absent from CDs.  Throughout the history of music, there has been a need to describe creative works.  So, the need to have some kind of order that allows to handle big amounts of data from CDs, motivated the creation of commercial databases, such CDDB, CDDB1, and FREEDB.  With these databases, the first element data sets, to describe the content of the CDS were born.   Due to the incapacity of CD to store data sets about its content, these databases became also a business success. 
+
+My exhibit will contain a database of CDs and Audio Tracks of Classical Music.  I would like to present the data in a way that the end user enjoy finding the data they want.  For doing that, the data associated with the CD and audio tracks should be presented offering a variety of possibilities to retrieve it with a minimum effort.  A selection of data sets based on FREEDB and CDDB1 as a baseline will be offered to the user, who will be able to choose intuitively from multiple choices to retrieve the data they need.
+The next is my Audio Data Set proposal for describing the content of Audio tracks and CDs for an Exhibit based on Classical Music.  Note that for some of the elements a controlled vocabulary or an authority will be used. 
+Elements:
+
+discId: a unique number associated with the audio file.  
+title: is a name of label relevant to the audio file.
+creator: is a container for sub-elements creator and creatorRole.(e.g.Siegfried Mauser, Soloist)
+dateComposed: A date associated with the creation of the work. Best practice is to use ISO 8601 or some other date/time standard. (e.g. 2007-06-02; or 2007-06; or 2007)
+workNumber.: A number or sequence of letters a composer gave to the work. (e.g. Opus K. 24)
+timePeriod: A historical period associated with the audio file content.  (e.g. Classical, Baroque) 
+contributor: is a container for values related to contributors and their role.  (e.g. Andreas Fischer, recording engineering)
+duration: provides a timestamp for the overall length or duration of a time-based media item. It represents the playback time. Best practice is to use a timestamp format such as HH:MM:SS.
+track: is intended to indicate the number and type of tracks that are found in an album or CD item. (e.g. 1 audio track, 2 audio tracks).
+trackDuration: provides a track timestamp for the overall length or duration a time-based media item. It represents the playback time. Best practice is to use a timestamp format such as HH:MM:SS.
+subject: will be used to assign topic headings or keywords that portray the intellectual content associated with the audio file.  A subject is expressed by keywords, key phrases, or even specific classification codes. Controlled vocabularies, authorities, formal classification codes, as well as folksonomies and user-generated tags, may be employed when assigning descriptive subject terms.
+description: is an element that uses free-form text or a narrative to report general information or content of an audio file.
+genre: is an element that describes the Genre of the audio file, which can be defined as a categorical description informed by the topical nature or a particular style or form of the content.  A controlled vocabulary will be used.
+instrumentPlayed: to indicate the instrument/instruments played.  It allows multiple values.  A controlled vocabulary with a list of instruments will be used.
+dateReleased : when a CD has been published or realeased..  Best practice is to use ISO 8601 or some other date/time standard. Best practice is to use ISO 8601 or some other date/time standard. (e.g. 2007-06-02; or 2007-06; or 2007)
+catalogNumber: includes a catalog number associated with the CD. (e.g. Celestial Harmonies-14326-2)
+producer: is a container for adding values related to the publisher or producer. (e.g. Public Broadcasting)
+recordingLocation: A place associated with the production of the audio file.
+rights: is a container used to describe the Rights for the asset. (e.g. Creative Commons)
+
+Controlled Vocabularies:
+Representation of dates and times. W3C Profile of ISO 8601
+Library of Congress Extended Date/Time Format (EDTF)
+Genre Controlled Vocabulary: will be built based on genre related to Classical Music.
+Instrument Controlled Vocabulary: will be built based on a list of instruments.
+Time Period Controlled Vocabulary: will be built based on time period.
+
+Authorities and Best Practices:
+ISO 8601, for dates.
+Time based: will use format such as HH:MM:SS.
