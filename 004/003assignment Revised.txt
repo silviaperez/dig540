@@ -1,0 +1,71 @@
+Week 3 – Assignment. (Week 4 - Revised)
+CDs were first launched by Sony and Philips in 1982.  Since there, the new product enjoyed commercial success and grew up all over the world.  A new important audio medium was created. In the nineties, the CD continued to grow and became a mass media.  Vast CD collections appeared in libraries, repositories, and radio stations. With the development of the CD-Recordable, which became a mass medium, allowed people to transferring analog media onto CD-R.
+But the music CD industry had a metadata problem. The CDs were designed to store digital files without no space to add descriptive and technical metadata associated with the content or recording.  The most basic elements, such as, artist, title, composer, or date, were absent from CDs.  Throughout the history of music, there has been a need to describe creative works.  So, the need to have some kind of order that allows to handle big amounts of data from CDs, motivated the creation of commercial databases, such CDDB, CDDB1, and FREEDB.  With these databases, the first element data sets, to describe the content of the CDS were born.   Due to the incapacity of CD to store data sets about its content, these databases became also a business success. 
+
+My exhibit will contain a database of CDs and Audio Tracks of Classical Music.  I would like to present the data in a way that the end user enjoy finding the data they want.  For doing that, the data associated with the CD and audio tracks should be presented offering a variety of possibilities to retrieve it with a minimum effort.  A selection of data sets based on FREEDB and CDDB1 as a baseline will be offered to the user, who will be able to choose intuitively from multiple choices to retrieve the data they need.
+The next is my Audio Data Set proposal for describing the content of Audio tracks and CDs for an Exhibit based on Classical Music. This database will not include singers or chorus.  Note that for some of the elements a controlled vocabulary or an authority will be used. 
+
+Review: 
+After looking again to the database schema, some elements were deleted, as Subject.  Also, some other fields were moved from the 'disc' table to other tables, as for instance 'genre', which now is in a new table: 'composition'.  Also, 'instrument_played" is a table linked to the table 'performer', and 'orquestra' is a table linked to the table 'director', and 'composition' is table linked to the table 'composer'.  In addition, linked tables were added between tables to stablish a relationship.
+
+Elements:
+
+disc_id: a unique number associated with the audio file.  
+title: is a name of label relevant to the audio file.
+released_year: year when a CD has been published or released.   (e.g. 2007) 
+total_discs: total number of discs on the CD. (eg. 1, 3, 7, etc...)
+total_tracks: total number of tracks on the CD. (eg. 15, 24, 30, etc...)
+disc_duration: provides the overall length or duration of a time-based media item. It represents the playback time. Best practice is to use a time format such as HH:MM:SS.
+country: a country associated with the element. A controlled vocabulary will be used:  
+ext_data: any text. 
+track:is intended to indicate the number and type of tracks that are found in an album or CD item. (e.g. 1 audio track, 2 audio tracks).
+track_recording: any data about the recording.
+track_number: track number. (eg. 1, 14, 30, etc...)
+trackdisc_number: disc number of the cd that the track is on
+track_duration: provides the overall length or duration a time-based media item. It represents the playback time. Best practice is to use a time format such as HH:MM:SS.
+label_name: label, sub-label or series. (eg. EMI Classics, RCA Victor Gold Seal, etc...)
+contributor: is a container for values related to contributors and their role. Sub-elements:last_name, first_name, date_birth, date_dead, birth_country. (e.g. Andreas Fischer, recording engineering)
+contributor_last_name:
+contributor_first_name:
+contributor_date_birth:
+contributor_date_dead:
+contributor_birth_country: a country associated with the element.
+contributor: is a container for values related to directors and their role. Sub-elements:last_name, first_name, date_birth, date_dead, birth_country.
+director_last_name:
+director_first_name:
+director_date_birth:
+director_date_dead:
+director_birth_country: a country associated with the element.
+orquestra_name: name of the orquestra.
+performer: is a container for values related to performers and their role. Sub-elements:last_name, first_name, date_birth, date_dead, birth_country.
+performer_last_name:
+performer_first_name:
+performer_date_birth:
+performer_date_dead:
+performer_birth_country: a country associated with the element.
+instrument_played: to indicate the instrument/instruments played.  It allows multiple values.  A controlled vocabulary with a list of instruments will be used.
+composer: is a container for values related to performers and their role. Sub-elements:last_name, first_name, date_birth, date_dead, birth_country.
+composer_last_name:
+composer_first_name:
+composer_date_birth:
+composer_date_dead:
+composer_birth_country: a country associated with the element.
+composition_title: name of the composition
+composition_date: a year associated with the creation of the work. Best practice is to use ISO 8601 or some other date/time standard. (e.g. 2007-06-02; or 2007-06; or 2007)
+composition_movement: describes a particular movement and key. A number or sequence of letters a composer gave to the work. (e.g. Opus K. 24)
+composition_setting: setting of the composition. (eg. "Piano Solo, Symphonic Orchestra, String Quartet, etc...")
+composition_genre: genre of the particular movement. An element that describes the Genre of the audio file, which can be defined as a categorical description informed by the topical nature or a particular style or form of the content.  A controlled vocabulary will be used.
+composition_period: period of the composition. A historical period associated with the audio file content. A controlled vocabulary is needed. (eg. Romantic, Classicism, Baroque, Renaissance, etc...)
+
+
+Controlled Vocabularies:
+Representation of dates and times. W3C Profile of ISO 8601
+Library of Congress Extended Date/Time Format (EDTF)
+Genre Controlled Vocabulary: will be built based on genre related to Classical Music.
+Instrument Controlled Vocabulary: will be built based on a list of instruments.
+Composition Time Period Controlled Vocabulary: will be built based on the time period.
+Countries: a list of countries will be used. MARC Code list for Countries:http://www.loc.gov/marc/countries/countries_name.html
+
+Authorities and Best Practices:
+ISO 8601, for dates.
+Time based: will use format such as HH:MM:SS.
