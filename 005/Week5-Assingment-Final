@@ -1,0 +1,181 @@
+DIG540-Fall 2015
+Silvia Perez
+Digital Exhibition-Classical Music
+Week 5 - Assignment
+
+---
+
+
+
+SELECT  `title` ,  `released_year` ,  `country` 
+FROM  `disc` 
+LIMIT 0 , 30
+
+Great Mozart Symphonies								1993	United States
+The cello sonatas, Brahms.							1983	Germany
+Tchaikovsky Piano Concertos 1 - 3. Concert Fantasy.	2003	United States
+
+
+---
+
+SELECT  `composer`.`last_name` ,  `composition`.`composition_title` 
+FROM composer, composition
+WHERE composer.id = composition.composer_id
+ORDER BY  `composer`.`last_name` ASC 
+LIMIT 0 , 30
+
+Brahms		Sonata for Piano and Violoncello in E minor, op. 38
+Brahms		Sonata for Piano and Violoncello in F major, op. 99
+Mozart		Symphony No. 40 in G minor, K. 550.
+Mozart		Symphony No. 41 in c Major, K 551 "Jupiter"
+Tchaikovsky	Piano Concertos 1 - 3. Concert Fantasy.
+
+
+---
+
+SELECT  `performer`.`last_name` ,  `instrument_name` 
+FROM performer, instrument
+WHERE instrument.id = performer.instrument_id
+LIMIT 0 , 30
+
+Rostropovich	Violoncello
+Serkin			Piano
+Donohoe			Piano
+
+
+---
+
+SELECT  `performer`.`last_name` ,  `performer`.`name` ,  `performer`.`birth_country` ,  `instrument`.`instrument_name` 
+FROM performer, instrument
+WHERE instrument.id = performer.instrument_id
+ORDER BY  `performer`.`last_name` ASC 
+LIMIT 0 , 30
+
+Donohoe			Peter			United Kingdom	Piano
+Rostropovich	Mstislav		Azerbaijan		Violoncello
+Serkin			Rudolf 			Hungary			Piano
+
+
+---
+
+
+SELECT  `director`.`last_name` ,  `director`.`name` ,  `director`.`birth_country` ,  `orquestra_name` 
+FROM director, orquestra
+WHERE  `orquestra`.`id` =  `director`.`orquestra_id` 
+ORDER BY  `director`.`last_name` ASC 
+LIMIT 0 , 30
+
+Barshai	Rudolf		Russia	Bournemouth Symphony Orchestra.
+Titov	Alexander	Russia	Orquestra "New Philharmony," St. PetersBurg.
+Titov	Alexander	Russia	Orchestra "Festival," St. Petersburg.
+
+
+
+---
+
+SELECT composer.last_name AS  'Artist', track.title AS  'Track'
+FROM composer, track, composer_track
+WHERE composer_track.composer_id = composer.id
+AND composer_track.track_id = track.id
+ORDER BY composer.last_name ASC
+
+
+Brahms			Sonata for Piano and Violoncello in E minor, op.38. 1. Allegro non troppo.
+Brahms			Sonata for Piano and Violoncello in E minor, op.38. 2. Allegretto quasi Menuetto.
+Brahms			Sonata for Piano and Violoncello in E minor, op.38. 3. Allegro.
+Brahms			Sonata for Piano and Viloncello in F major, op. 99. 1. Allegro vivace.
+Brahms			Sonata for Piano and Viloncello in F major, op. 99. 2. Adagio affettuoso.
+Brahms			Sonata for Piano and Viloncello in F major, op. 99. 3. Allegro passionato.
+Brahms			Sonata for Piano and Viloncello in F major, op. 99. 4. Allegro molto.
+Mozart			Symphony No 40 in G minor, K550. I. Molto allegro.
+Mozart			Symphony No 40 in G minor, K550. II. Andante.
+Mozart			Symphony No 40 in G minor, K550.  III. Menuetto. Â Allegretto - Trio.
+Mozart			Symphony No 40 in G minor, K550. IV. Allegro assai.
+Mozart			Symphony No.41 in C Major, K. 551 "Jupiter."  I.  Allegro vivace
+Mozart			Symphony No.41 in C Major, K. 551 "Jupiter." II. Andante cantabile.
+Mozart			Symphony No.41 in C Major, K. 551 "Jupiter."  III. Menuetto. Allegretto - Trio.
+Mozart			Symphony No.41 in C Major, K. 551 "Jupiter."  IV. Molto allegro.
+Mozart			Overture to The Marriage of Figaro, K. 492.
+Tchaikovsky		Concert Fantasy, op 56. I. Andante mosso.
+Tchaikovsky		Concert Fantasy, op 56. II. Contrastes: Andante catabible - Molto vivace - Vivacissimo - Allegro moderato - Vivace.
+Tchaikovsky		Piano Concerto N.1., Op 23. I. Allegro non troppo e molto maestoso.
+Tchaikovsky		Piano Concerto N.1., Op 23. II. Andantino semplice - Prestissimo - Tempo I.
+Tchaikovsky		Piano Concerto N.1., Op 23. III. Allegro con Fuoco.
+Tchaikovsky		Piano Concerto No.2, Op.44.  I. Allegro brillante.
+Tchaikovsky		Piano Concerto No.2, Op.44. II. Andante non troppo.
+Tchaikovsky		Piano Concerto No.2, Op.44. III. Allegro con fuoco.
+Tchaikovsky		Piano Concerto No.3, Op.75.  Allegro Brillante - Cadenza - Vivacissimo.
+
+
+
+---
+
+SELECT director.last_name, director.name, track.title
+FROM director, track, director_track
+WHERE director_track.director_id = director.id
+AND director_track.track_id = track.id
+ORDER BY director.last_name ASC 
+LIMIT 0 , 30
+
+
+Barshai	Rudolf		Concert Fantasy, op 56. I. Andante mosso.
+Barshai	Rudolf		Concert Fantasy, op 56. II. Contrastes: Andante catabible - Molto vivace - Vivacissimo - Allegro moderato - Vivace.
+Barshai	Rudolf		Piano Concerto N.1., Op 23. I. Allegro non troppo e molto maestoso.
+Barshai	Rudolf		Piano Concerto N.1., Op 23. II. Andantino semplice - Prestissimo - Tempo I.
+Barshai	Rudolf		Piano Concerto N.1., Op 23. III. Allegro con Fuoco.
+Barshai	Rudolf		Piano Concerto No.2, Op.44.  I. Allegro brillante.
+Barshai	Rudolf		Piano Concerto No.2, Op.44. II. Andante non troppo.
+Barshai	Rudolf		Piano Concerto No.2, Op.44. III. Allegro con fuoco.
+Barshai	Rudolf		Piano Concerto No.3, Op.75.  Allegro Brillante - Cadenza - Vivacissimo.
+Titov	Alexander	Symphony No 40 in G minor, K550. I. Molto allegro.
+Titov	Alexander	Symphony No 40 in G minor, K550. II. Andante.
+Titov	Alexander	Symphony No 40 in G minor, K550.  III. Menuetto. Â Allegretto - Trio.
+Titov	Alexander	Symphony No 40 in G minor, K550. IV. Allegro assai.
+Titov	Alexander	Symphony No.41 in C Major, K. 551 "Jupiter."  I.  Allegro vivace
+Titov	Alexander	Symphony No.41 in C Major, K. 551 "Jupiter." II. Andante cantabile.
+Titov	Alexander	Symphony No.41 in C Major, K. 551 "Jupiter."  III. Menuetto. Allegretto - Trio.
+Titov	Alexander	Symphony No.41 in C Major, K. 551 "Jupiter."  IV. Molto allegro.
+Titov	Alexander	Overture to The Marriage of Figaro, K. 492.
+
+
+---
+
+
+
+SELECT composer.last_name, composer.name, composer.birth_country, track.title, track.track_number, track_duration
+FROM composer, track, composer_track
+WHERE composer_track.composer_id = composer.id
+AND composer_track.track_id = track.id
+ORDER BY composer.last_name ASC 
+LIMIT 0 , 30
+
+Brahms	Johannes			Germany		Sonata for Piano and Violoncello in E minor, op.38. 1. Allegro non troppo.			1	0:15:01
+Brahms	Johannes			Germany		Sonata for Piano and Violoncello in E minor, op.38. 2. Allegretto quasi Menuetto.	2	0:05:34
+Brahms	Johannes			Germany		Sonata for Piano and Violoncello in E minor, op.38. 3. Allegro.						3	0:06:33
+Brahms	Johannes			Germany		Sonata for Piano and Viloncello in F major, op. 99. 1. Allegro vivace.				4	0:09:27
+Brahms	Johannes			Germany		Sonata for Piano and Viloncello in F major, op. 99. 2. Adagio affettuoso.			5	0:08:22
+Brahms	Johannes			Germany		Sonata for Piano and Viloncello in F major, op. 99. 3. Allegro passionato.			6	0:07:57
+Brahms	Johannes			Germany		Sonata for Piano and Viloncello in F major, op. 99. 4. Allegro molto.				7	0:04:24
+Mozart	Wolfgang Amadeus	Austria		Symphony No 40 in G minor, K550. I. Molto allegro.									1	0:08:16
+Mozart	Wolfgang Amadeus	Austria		Symphony No 40 in G minor, K550. II. Andante.										2	0:11:37
+Mozart	Wolfgang Amadeus	Austria		Symphony No 40 in G minor, K550.  III. Menuetto. Â Allegretto - Trio.				3	0:04:27
+Mozart	Wolfgang Amadeus	Austria		Symphony No 40 in G minor, K550. IV. Allegro assai.									4	0:06:07
+Mozart	Wolfgang Amadeus	Austria		Symphony No.41 in C Major, K. 551 "Jupiter."  I.  Allegro vivace					5	0:07:33
+Mozart	Wolfgang Amadeus	Austria		Symphony No.41 in C Major, K. 551 "Jupiter." II. Andante cantabile.					6	0:08:57
+Mozart	Wolfgang Amadeus	Austria		Symphony No.41 in C Major, K. 551 "Jupiter."  III. Menuetto. Allegretto - Trio.		7	0:04:49
+Mozart	Wolfgang Amadeus	Austria		Symphony No.41 in C Major, K. 551 "Jupiter."  IV. Molto allegro.					8	0:06:49
+Mozart	Wolfgang Amadeus	Austria		Overture to The Marriage of Figaro, K. 492.											9	0:04:12
+Tchaikovsky	Pyotr Il'yich 	Russia		Concert Fantasy, op 56. I. Andante mosso.											1	0:15:04
+Tchaikovsky	Pyotr Il'yich 	Russia		Concert Fantasy, op 56. II. Contrastes: Andante catabible - Molto vivace - Vivacissimo - Allegro moderato - Vivace.	2	0:12:48
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto N.1., Op 23. I. Allegro non troppo e molto maestoso.					3	0:27:21
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto N.1., Op 23. II. Andantino semplice - Prestissimo - Tempo I.			4	0:07:39
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto N.1., Op 23. III. Allegro con Fuoco.									5	0:07:04
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto No.2, Op.44.  I. Allegro brillante.									1	0:22:01
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto No.2, Op.44. II. Andante non troppo.									2	0:17:06
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto No.2, Op.44. III. Allegro con fuoco.									3	0:07:40
+Tchaikovsky	Pyotr Il'yich 	Russia		Piano Concerto No.3, Op.75.  Allegro Brillante - Cadenza - Vivacissimo.				4	0:16:07
+
+
+
+---
+
