@@ -1,0 +1,43 @@
+009- Hypothetical collection and plugins.
+DIG 540 – Digital Collections and Exhibits
+Silvia Perez-Barraza
+
+Introduction to Omeka.-
+
+Omeka was designed to be simple.  Omeka’s data model is simple by design.  The people who developed it described Omeka basically as the WordPress for cultural heritage institutions.  Its purpose was to be straightforward and easy to use.
+The entities that Omeka recognizes are basically Items, Collections, and Users.  The Item is the most basis for everything else that Omeka does.  You will be able to assign some metadata based on Dublin Core, a type, such as Still Image, Moving Image, or any other type, and also you will be able to assign tags.  
+When you look at the diagram that comes from the Omeka documentation, you can see that at the top is the Archive that is the set of all the Items that have been uploaded into the Omeka instance.  Each Item has associated with it Dublin Core metadata, tags, files, and collections.  Collections may have sub-collections, but ultimately, each collection is made up from Items.  
+You can also have Exhibits, which are built on pages, but also, based on Items.  The model for the exhibits is based on museum exhibits, with a page and a single object embedded in a contextualized page, surrounding a particular Item.
+The Item is the center part of the Exhibits and the structure of the exhibit is a navigation through the materials on the exhibit.  Each category belongs to a particular Item and its metadata.
+
+Ideal Collection.-
+My hypothetical collection will be an online repository that supports research and teaching with local online resources from the Special Collections department.
+It will include institutional publications, cultural and natural pieces, and materials related to the institution’s history, including photos, yearbooks, and scrapbooks, moving images and sound. In addition, it may include sub-collections, but they won’t be reflecting an organizational hierarchy.  Basically, each collection will be individually built, with a specific name, based on the nature of the Items included on that collection, based on the provenance of that collection, or based on the sponsors, people or institutions that donated the Items.  For instance, there will be a collection based on items that came from Japan, China or any other oriental country, that will be called, Asian Collection.  The Asian Collection will include, documents, books, and images of tridimensional objects such as, cookware, hair pins, clothes, shoes, writing tools, etc. 
+
+Collection Customization.-
+This collection could be customized and enhanced using some of the plugins available on Omeka.   
+-Library of Congress suggest 2.0. When creating or editing an Item, metadata patterns, authorities and controlled vocabularies are crucial to have good metadata. Having good metadata will help to retrieve the right data when needed.   I would add the Library of Congress Suggest plugin to insert Library of Congress Subject Headings.  This plugin will speed the addition of metadata related to subjects, topical and genera.  This plugin, will help to search for LCSH at the Library of Congress authorities’ platform without leaving your form on your Omeka instance.  This plugin is particularly useful for adding or editing metadata to an Item.
+
+-Scripto 2.0.  In addition, I would use the Scripto plugin.  This plugin allows you to crowdsource the transcription of your Omeka content.  Particularly, it will be helpful with handwritten documents, such as letters or manuscripts, and with sound files.  This plugin is based on crowdsourcing and it will use patron participation to complete an Item description.
+
+-Geolocation 2.0. Also, as my ideal collection is related to different countries in Asia, I would include the Geolocation plugin, which is a plugin that allows you to pin items in your database to a Google map. Items are geolocated individually with related metadata and collectively on a central map.  I find this plugin very helpful for the user search experience.  It will require an addition of specific metadata related to Latitude and Longitude.  The default latitude and longitude for specific geographic places could be found at the Getty Vocabularies Getty Thesaurus of Geographic Names® Online
+
+Conclusion. Plugins will enhance your Omeka instance with faster options, customized forms, social media share features, enhanced search features, and more search engine optimization (SEO) tools.  
+
+Resources:
+Getty Thesaurus of Geographic Names® Online (TGN)
+http://www.getty.edu/research/tools/vocabularies/tgn/index.html
+Library of Congress Subject Headings.  Authority Headings Search Overview.
+http://authorities.loc.gov/cgi-bin/Pwebrecon.cgi?DB=local&PAGE=First
+Pomerantz, Jeffry.
+Metadata.  (Coursera, 2014)
+
+
+
+
+
+
+
+
+
+
