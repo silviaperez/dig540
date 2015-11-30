@@ -1,7 +1,7 @@
 <?php
 $dsn = 'mysql:dbname=spanishi_classicalmusic;host=localhost;port=3306';
 $name = 'spanishi_silvia';
-$pass = 'paracas5';
+$pass = 'xxxxxxx5';
 $db=false;
 //Connect to the database
 try {
